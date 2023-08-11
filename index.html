@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>MY Voice Asisstant</title>
+  </head>
+  <body>
+    <div class="container">
+      <span class="mytitle">My Voice Asisstant</span>
+      <button onclick="speak();">init audio</button>
+      <form
+        onsubmit="
+        event.preventDefault();
+        conversationUserAdd(document.getElementById('input-text').value);
+        openai_test();"
+      >
+        <input id="input-text" type="text" placeholder="ask away..." />
+        <button id="submit-button" type="submit">Submit</button>
+      </form>
+      <div id="chat-container"></div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

@@ -60,7 +60,7 @@ loadVoicesWhenAvailable(function () {
 });
 
 function speak() {
-  setTimeout(() => playByText("en-US", "Hello, world"), 300);
+  setTimeout(() => playByText("en-US", "Yes sir i am working"), 300);
 }
 
 let open_ai_response;

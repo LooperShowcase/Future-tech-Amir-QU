@@ -6,8 +6,10 @@
   </head>
   <body>
     <div class="container">
-      <span class="mytitle">My Voice Asisstant</span>
-      <button onclick="speak();">init audio</button>
+      <div id="content">
+      <span class="mytitle">              knockoffGPT (that will knock gpt off..😎)</span>
+      <button onclick="speak();" style="margin-bottom: 30%">init audio</button>
+      </div>
       <form
         onsubmit="
         event.preventDefault();
@@ -15,7 +17,7 @@
         openai_test();"
       >
         <input id="input-text" type="text" placeholder="ask away..." />
-        <button id="submit-button" type="submit">Submit</button>
+        <button id="submit-button" type="submit">generate</button>
       </form>
       <div id="chat-container"></div>
     </div>

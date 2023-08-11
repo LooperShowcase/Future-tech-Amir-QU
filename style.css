@@ -9,19 +9,23 @@ html {
   background-image: url(aaaa.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center center; 
+  background-attachment: fixed;
 }
 .mytitle {
-    font-size: larger;
+  font-size: 30px;
+ 
 }
 
 body {
   font-family: Arial, sans-serif;
-  justify-content: content;
+  justify-content: center; /* Changed to 'center' for vertical alignment */
   align-items: center;
   display: flex;
   position: relative;
   flex-direction: column;
+  min-height: 100vh; /* Ensure body takes at least full viewport height */
+  margin: 0; /* Remove default margin */
 }
 
 h1 {
@@ -29,27 +33,27 @@ h1 {
   display: block;
   margin: 0;
 }
+.content{
+ 
+}
 
 .container {
-  width: 30%;
-  height: 30vh;
-  margin: 0 auto;
-  padding: 30px;
-  background-color: #3473c5;
+  width: 90%; /* Adjusted for mobile screens */
+  max-width: 400px; /* Added maximum width */
+  padding: 17px 40px; /* Adjusted for better spacing */
+  background-color: #548dd9;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 300px; /* Add some space at the bottom */
-  margin-top: 200px;
-  align-items:center;
+  margin: 20px auto 100px; /* Adjusted margins */
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
+  height:35vh;
 }
 
 h1 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  align-items: center;
-  margin-top: 100px;
+  margin-bottom: 15px; /* Adjusted for mobile screens */
+  margin-top: 20px; /* Adjusted for mobile screens */
+  text-align: center; /* Center the heading */
 }
 
 /* Chat styles */
@@ -64,7 +68,7 @@ h1 {
 }
 
 .chat-bubble {
-  max-width: 70%;
+  max-width: 80%; /* Adjusted for mobile screens */
   padding: 10px 15px;
   border-radius: 10px;
 }
@@ -75,33 +79,34 @@ h1 {
 }
 
 .assistant {
-  background-color: #f2f2f2;
+  background-color: #ffffff;
 }
 
 /* User input form */
 form {
   display: flex;
   margin-top: 20px;
+  width: 100%; /* Ensure form takes full width */
 }
 
 input[type="text"] {
   flex: 1;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 5px 0 0 5px;
+  border-radius: 5px;
   font-size: 16px;
-  width: 100%
+  margin-bottom: 100px;
 }
 
 button#submit-button {
   background-color: #3f72af;
   color: #ffffff;
   border: none;
-  border-radius: 0 5px 5px 0;
   padding: 10px 20px;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s ease;
+  margin-bottom: 100px;  
 }
 
 button#submit-button:hover {
@@ -111,16 +116,18 @@ button#submit-button:hover {
 /* Mobile responsive styles */
 @media (max-width: 600px) {
   .container {
-    padding: 10px;
+    margin: 450px auto; /* Adjusted margins for mobile screens */
   }
 
   h1 {
-    font-size: 20px;
-    margin-bottom: 15px;
+    font-size: 22px; /* Adjusted font size for mobile screens */
+    margin-top: 15px;
+    margin-bottom: 10px; /* Adjusted margins for mobile screens */
   }
 
   .chat-bubble {
-    max-width: 90%;
+    max-width: 100%; /* Adjusted for mobile screens */
+    padding: 8px 12px; /* Adjusted padding for mobile screens */
   }
 
   input[type="text"] {
@@ -132,6 +139,4 @@ button#submit-button:hover {
     padding: 8px 15px;
     font-size: 14px;
   }
-}
-.background-image {
 }
